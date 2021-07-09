@@ -25,7 +25,7 @@ export class TransactionlistComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.filteredTransactions = this.transactions
+      this.filteredTransactions = this.transactions.sort((a, b) => (a.dates.valueDate < b.dates.valueDate) ? 1 : -1)
     }, 100);
   }
 }
