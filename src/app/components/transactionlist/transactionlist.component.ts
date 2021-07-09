@@ -23,9 +23,13 @@ export class TransactionlistComponent implements OnInit {
     }
   }
 
+  getColorText(amount: number) {
+    return amount < 0 ? 'color-red' : 'color-green'
+  }
+
   ngOnInit(): void {
     setTimeout(() => {
-      this.filteredTransactions = this.transactions.sort((a, b) => (a.dates.valueDate < b.dates.valueDate) ? 1 : -1)
+      this.filteredTransactions = this.transactions
     }, 100);
   }
 }

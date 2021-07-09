@@ -1,16 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+$red: #F34141;
+$green: #04AA6D;
+$orange: #ec6f31;
+$gray: gray;
+$white: white;
+$black: black;
+$blue: #02a1e0;
+
 html {
   overflow: hidden;
   padding: 0;
 }
 .btn-primary, .btn-primary:hover, .btn-primary:focus {
-  background-color: #ec6f31;
-  border-color: #ec6f31;
+  background-color: $orange;
+  border-color: $orange;
 }
 .btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
-  color: black;
-  background-color: white;
-  border-color: black;
+  color: $black;
+  background-color: $white;
+  border-color: $black;
 }
 .modal-backdrop { 
   display: none;

@@ -206,11 +206,10 @@ export class TransactionService {
   constructor() { }
 
   getTransactions() {
+    const sortedTransactions = transactions.sort((a, b) => (a.dates.valueDate < b.dates.valueDate) ? 1 : -1)
     return new Promise(resolve => resolve(transactions));
   }
   addTransactions(data: any) {
-    console.log('transactions', transactions)
-    console.log('data', data)
     const item = {
       categoryCode: "#12a580",
       dates: {
@@ -222,7 +221,7 @@ export class TransactionService {
       },
       transaction: {
         amountCurrency: {
-          amount: data.amount,
+          amount: - data.amount,
           currencyCode: "EUR"
         },
         creditDebitIndicator: "CRDT",
@@ -230,7 +229,8 @@ export class TransactionService {
       }
     }
     return new Promise(resolve => {
-      transactions.unshift(item);
+      transactions.unshift(item)
+      transactions.sort((a, b) => (a.dates.valueDate < b.dates.valueDate) ? 1 : -1);
       resolve(item);
     });
   }
