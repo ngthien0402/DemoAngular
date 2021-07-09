@@ -1,0 +1,19 @@
+header {
+  height: 50px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+footer {
+  height: 50px;
+}
+.main-bkg {
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  z-index: 0;
+}

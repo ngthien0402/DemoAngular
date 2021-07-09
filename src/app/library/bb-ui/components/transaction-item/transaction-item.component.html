@@ -1,0 +1,26 @@
+<div class="row item-row">
+  <!-- <div class="col-2 item-color">
+    <ng-content select="[data-test-hook='transactionColour']"]></ng-content>
+  </div> -->
+  <div class="col-3 item-date">
+    <ng-content select="[data-test-hook='transactionDate']"]></ng-content>
+  </div>
+  <div class="col-5">
+    <div class="merchant-details">
+      <div class="row">
+        <h5>
+          <ng-content select="[data-test-hook='transactionMerchantName']"></ng-content>
+        </h5>
+      </div>
+      <div class="row grey">
+        <ng-content select="[data-test-hook='transactionType']"></ng-content>
+      </div>
+    </div>
+  </div>
+  <div class="col-2 item-amount">
+    € <ng-content select="[data-test-hook='transactionAmount']"></ng-content>
+  </div>
+</div>
+
+
+

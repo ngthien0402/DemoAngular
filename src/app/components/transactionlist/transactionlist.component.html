@@ -1,0 +1,14 @@
+<div class="row pb-3">
+  <app-filter (inputChange)="getTextChange($event)"></app-filter>
+</div>
+<div class="list-item">
+  <div class="row pb-1" *ngFor="let item of filteredTransactions">
+    <app-transaction-item>
+      <!-- <span data-test-hook="transactionColour">{{ item.categoryCode }}</span> -->
+      <span data-test-hook="transactionDate">{{ item.dates.valueDate | date: 'MMM-dd' }}</span>
+      <span data-test-hook="transactionMerchantName">{{ item.merchant.name }}</span>
+      <span data-test-hook="transactionType">{{ item.transaction.creditDebitIndicator }}</span>
+      <span data-test-hook="transactionAmount">{{ item.transaction.amountCurrency.amount }}</span>
+    </app-transaction-item>
+  </div>
+</div>

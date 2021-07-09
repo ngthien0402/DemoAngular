@@ -1,0 +1,39 @@
+.transaction {
+  max-width: 100%;
+  .sub-content {
+    background-color: white;
+    position: relative;
+    .title {
+      color: white;
+      background-color: #02a1e0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 60px;
+      vertical-align: middle;
+      text-align: left;
+      border-radius: 20px 20px 0px 0px;
+      .font-title {
+        font-size: x-large;
+        padding: 15px
+      }
+    }
+  }
+  .make-payment {
+    height: 400px;
+  }
+  
+  .padding-content {
+    padding-top: 80px;
+  }
+  .padding-sub {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+  }
+}

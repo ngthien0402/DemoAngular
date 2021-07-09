@@ -1,0 +1,15 @@
+.item-row {
+  border-bottom: solid 1px grey;
+}
+.item-color,
+.item-amount,
+.item-date {
+  height: 55px;
+  padding-top: 13px;
+}
+.item-amount {
+  text-align: right;
+}
+.grey {
+  color: gray;
+}
